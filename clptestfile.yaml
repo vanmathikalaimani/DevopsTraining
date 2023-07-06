@@ -1,0 +1,8 @@
+- name: Linux HC
+  hosts: localhost
+  environment:
+    PATH: '/sbin:/bin:/usr/local/bin:/usr/sbin:/usr/bin'
+  tasks:
+   - name: space check
+     shell: df -h
+     ignore_errors: yes
