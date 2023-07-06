@@ -1,0 +1,11 @@
+---
+- name: credentialdebug
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  any_errors_fatal: true
+  tasks:
+    - name: print credential
+      debug:
+        msg: | 
+          Secret1 is "{{ azurekv_secret }}".
